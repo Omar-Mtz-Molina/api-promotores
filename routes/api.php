@@ -22,3 +22,9 @@ Route::group(['middleware' => 'api','prefix' => 'auth'], function ($router) {
     Route::post('logout', 'AuthController@logout');
     Route::post('getInfo', 'AuthController@me');
 });
+
+Route::group(['middleware' => 'api'], function ($router) {
+    Route::post('getOpportunities', 'OpportunityController@getOpportunities');
+});
+
+
